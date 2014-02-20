@@ -13,7 +13,7 @@ PlayersView.prototype._onSetPlayer = function(side, player) {
     node.find('.name').text(name);
     var avatar = player.getAvatar();
     if (avatar) {
-        node.find('.avatar').html('<img width="40" height="40" src="' + avatar + '">');
+        node.find('.avatar').html('<img alt="' + name + '" width="40" height="40" src="' + avatar + '">');
     }
     if(this._players.isPlayerSide(side)){
         $('.ships .'+side).find('.boats, .counts').show();
