@@ -1,0 +1,80 @@
+<style>
+    %% css/styles.css %%
+</style>
+
+<div class="players">
+    <div class="player left">
+        <input type="button" value="Join left" id="left">
+        <div class="avatar"></div>
+        <div class="name"></div>
+        <input type="button" value="Ready to play" class="ready">
+        <div class="hint"></div>
+    </div>
+    <div class="player right">
+        <input type="button" value="Join right" id="right">
+        <div class="avatar"></div>
+        <div class="name"></div>
+        <input type="button" value="Ready to play" class="ready">
+        <div class="hint"></div>
+    </div>
+</div>
+
+<div class="clear"></div>
+
+<div class="boards">
+    <div class="board left"></div>
+    <div class="board right last"></div>
+</div>
+
+<div class="ships">
+    <div class="left">
+        <div class="boats">
+            <div class="ship h battleship"></div>
+            <div class="ship h submarine"></div>
+            <div class="ship h destroyer"></div>
+            <div class="ship h boat"></div>
+        </div>
+        <div class="counts">
+            <div class="battleship count">1</div>
+            <div class="submarine count">2</div>
+            <div class="destroyer count">3</div>
+            <div class="boat count">4</div>
+        </div>
+        <div class="hint"></div>
+    </div>
+    <div class="right">
+        <div class="boats">
+            <div class="ship h battleship"></div>
+            <div class="ship h submarine"></div>
+            <div class="ship h destroyer"></div>
+            <div class="ship h boat"></div>
+        </div>
+        <div class="counts">
+            <div class="battleship count">1</div>
+            <div class="submarine count">2</div>
+            <div class="destroyer count">3</div>
+            <div class="boat count">4</div>
+        </div>
+        <div class="hint"></div>
+    </div>
+</div>
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js"></script>
+<script>
+    (function() {
+        %% js/event-emitter.js %%
+        %% js/players/player.js %%
+        %% js/players/players.js %%
+        %% js/board/board.js %%
+        %% js/ships/ship.js %%
+        %% js/game/game.js %%
+        %% js/wave/users.js %%
+        %% js/wave/gadget.js %%
+        %% js/views/players-view.js %%
+        %% js/views/board-view.js %%
+        %% js/views/hint-view.js %%
+        var gadget = new Gadget();
+    })();
+</script>

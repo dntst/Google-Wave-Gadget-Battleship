@@ -1,0 +1,96 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-size: 14px;
+}
+
+.sector{
+    border-right: 1px solid white;
+    border-bottom: 1px solid white;
+    height: 39px;
+    width: 39px;
+    float: left;
+}
+.last{
+    clear: left;
+}
+.clear{
+    clear: both;
+}
+.ship{
+    background: url('/img/ships.png') no-repeat;
+    float: left;
+    cursor: pointer;
+}
+.active{
+    background: #b3b3b3;
+}
+.conflict{
+    background: red;
+}
+#game-field{
+    background: url('/img/fileds-back.png') left top no-repeat;
+    width: 400px;
+    height: 400px;
+    overflow: hidden;
+    display: inline-block;
+    zoom: 1;
+    *display: inline;
+    position: relative;
+}
+
+.ship-1-h{
+    background-position: 0 0;
+    width: 36px;
+    height: 36px;
+    margin: 2px 0 0 1px;
+}
+
+.ship-1-v{
+    background-position: -39px 0;
+    width: 36px;
+    height: 36px;
+    margin: 1px 0 0 2px;
+}
+
+.ship-2-h{
+    background-position: -78px 0;
+    width: 76px;
+    height: 35px;
+    margin: 2px 0 0 1px;
+}
+
+.ship-2-v{
+    background-position: 0 -43px;
+    width: 35px;
+    height: 76px;
+    margin: 1px 0 0 2px;
+}
+
+.ship-3-h{
+    background-position: -158px 0;
+    width: 116px;
+    height: 35px;
+    margin: 2px 0 0 1px;
+}
+
+.ship-3-v{
+    background-position: -39px -43px;
+    width: 35px;
+    height: 116px;
+    margin: 1px 0 0 2px;
+}
+
+.ship-4-h{
+    background-position: -120px -43px;
+    width: 156px;
+    height: 35px;
+    margin: 2px 0 0 1px;
+}
+
+.ship-4-v{
+    background-position: -77px -43px;
+    width: 35px;
+    height: 156px;
+    margin: 1px 0 0 2px;
+}

@@ -1,0 +1,236 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-size: 14px;
+    font-family: sans-serif;
+}
+
+.sector{
+    border-right: 1px solid white;
+    border-bottom: 1px solid white;
+    height: 39px;
+    width: 39px;
+    float: left;
+}
+.sector.active{
+    cursor: pointer;
+}
+.sector.active:hover{
+    cursor: pointer;
+    background: #6a8b91;
+    opacity: 0.5;
+}
+.first{
+    clear: left;
+}
+.clear{
+    clear: both;
+}
+.ship, .empty, .reserved, .attacked, .destroyed{
+    background: url(data:image/png;base64,%% img/ships.png base64 %%) no-repeat;
+    cursor: pointer;
+}
+.empty, .reserved, .attacked, .destroyed{
+    position: absolute;
+    cursor: default !important;
+    width: 39px;
+    height: 39px;
+    z-index: 9999;
+}
+.empty{
+    background-position: -178px -93px;
+}
+.reserved{
+    background-position: -118px -141px;
+}
+.attacked{
+    background-position: -120px -94px;
+}
+.destroyed{
+    background-position: -164px -140px;
+}
+.boat.h{
+    background-position: 0 0;
+    width: 36px;
+    height: 36px;
+    margin: 2px 0 0 1px;
+}
+
+.boat.v{
+    background-position: -39px 0;
+    width: 36px;
+    height: 36px;
+    margin: 1px 0 0 2px;
+}
+
+.destroyer.h{
+    background-position: -78px 0;
+    width: 76px;
+    height: 35px;
+    margin: 2px 0 0 1px;
+}
+
+.destroyer.v{
+    background-position: 0 -43px;
+    width: 35px;
+    height: 76px;
+    margin: 1px 0 0 2px;
+}
+
+.submarine.h{
+    background-position: -158px 0;
+    width: 116px;
+    height: 35px;
+    margin: 2px 0 0 1px;
+}
+
+.submarine.v{
+    background-position: -39px -43px;
+    width: 35px;
+    height: 116px;
+    margin: 1px 0 0 2px;
+}
+
+.battleship.h{
+    background-position: -120px -43px;
+    width: 156px;
+    height: 35px;
+    margin: 2px 0 0 1px;
+}
+
+.battleship.v{
+    background-position: -77px -43px;
+    width: 35px;
+    height: 156px;
+    margin: 1px 0 0 2px;
+}
+
+.player{
+    width: 400px;
+    margin: 0 50px 5px 0;
+    float: left;
+}
+
+.player .name{
+    float: left;
+    font-weight: bold;
+    line-height: 40px;
+}
+
+.player .avatar{
+    float: left;
+    margin-right: 10px;
+}
+
+.player .avatar img{
+    float: left;
+}
+
+.player input{
+    background: #f3f3f3;
+    background: -moz-linear-gradient(top, #f3f3f3 0%, #dedede 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#f3f3f3), color-stop(100%,#dedede));
+    background: -webkit-linear-gradient(top, #f3f3f3 0%,#dedede 100%);
+    background: -o-linear-gradient(top, #f3f3f3 0%,#dedede 100%);
+    background: -ms-linear-gradient(top, #f3f3f3 0%,#dedede 100%);
+    background: linear-gradient(top, #f3f3f3 0%,#dedede 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f3f3f3', endColorstr='#dedede',GradientType=0 );
+    border-radius: 3px;
+    height: 32px;
+    border: 1px solid #859099;
+    padding: 0 11px;
+    color: #364552;
+    text-shadow: white 1px 1px 1px;
+    font-weight: normal;
+    margin-top: 5px;
+}
+
+.player input:hover{
+    background: rgb(243,243,243);
+    background: -moz-linear-gradient(top, rgba(243,243,243,1) 0%, rgba(198,198,198,1) 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(243,243,243,1)), color-stop(100%,rgba(198,198,198,1)));
+    background: -webkit-linear-gradient(top, rgba(243,243,243,1) 0%,rgba(198,198,198,1) 100%);
+    background: -o-linear-gradient(top, rgba(243,243,243,1) 0%,rgba(198,198,198,1) 100%);
+    background: -ms-linear-gradient(top, rgba(243,243,243,1) 0%,rgba(198,198,198,1) 100%);
+    background: linear-gradient(top, rgba(243,243,243,1) 0%,rgba(198,198,198,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f3f3f3', endColorstr='#c6c6c6',GradientType=0 );
+}
+
+.board{
+    width: 400px;
+    margin: 0 50px 10px 0;
+    float: left;
+    background: url(data:image/png;base64,%% img/fileds-back.png base64 %%) left top no-repeat;
+    width: 400px;
+    height: 400px;
+    overflow: hidden;
+    display: inline-block;
+    zoom: 1;
+    *display: inline;
+    position: relative;
+}
+
+.board.last{
+    margin: 0 0 10px 0 !important;
+}
+
+.boards .right{
+    background-position: -400px 0;
+}
+
+.ships{
+    overflow: hidden;
+    clear: both;
+}
+
+.ships .left, .ships .right{
+    width: 400px;
+    margin: 5px 50px 0 0;
+    float: left;
+}
+
+.ships .left .boats, .ships .left .counts,
+.ships .right .boats, .ships .right .counts{
+    display: none;
+}
+
+.ships .count{
+    line-height: 35px;
+    font-weight: bold;
+    color: #7A7A7A;
+    margin: 2px 0 0 0;
+}
+
+.ships .boats{
+    float: left;
+    margin-right: 10px;
+}
+
+.ships .counts{
+    float: left;
+}
+
+.ships .hint{
+    float: left;
+    margin-left: 30px;
+    max-width: 185px;
+    background: #C3D5D8;
+    border-radius: 5px;
+    color: #616161;
+    padding: 5px;
+    display: none;
+}
+
+.players .player .ready{
+    display: none;
+    float: right;
+}
+
+.players .player .hint{
+    display: none;
+    float: right;
+    color: #18B0B2;
+    font-weight: bold;
+    line-height: 40px;
+    display: none;
+}
